@@ -5779,6 +5779,7 @@
      * }
      */
     function waterfall (tasks, callback) {
+        console.log('tasks',tasks);
         callback = once(callback);
         if (!Array.isArray(tasks)) return callback(new Error('First argument to waterfall must be an array of functions'));
         if (!tasks.length) return callback();
